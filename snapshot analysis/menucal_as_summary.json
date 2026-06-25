@@ -1,0 +1,33 @@
+{
+  "project_name": "MenuCal",
+  "final_snapshot": {
+    "date": "2026-01-05",
+    "total_modules": 27,
+    "responsibility_separated_modules": 4,
+    "responsibility_mixed_or_ambiguous_modules": 23,
+    "RS": 0.14814814814814814,
+    "total_dependencies": 399,
+    "organized_dependencies": 8,
+    "disorganized_dependencies": 391,
+    "DO": 0.020050125313283207,
+    "AS": 0.08409913673071567
+  },
+  "definition": "Architectural Structuring (AS) measures the overall degree of architectural structuring as the arithmetic mean of Responsibility Separation (RS) and Dependency Organization (DO).",
+  "formula": "AS = (RS + DO) / 2",
+  "RS_formula": "RS = responsibility-separated organizational modules / total organizational modules",
+  "DO_formula": "DO = dependency relationships not participating in dependency cycles / total detected dependency relationships",
+  "RS_definition": "A module is responsibility-separated when its organizational context indicates a single semantically coherent responsibility inferred from observable organizational artifacts.",
+  "DO_definition": "A dependency is organized when it does not participate in a dependency cycle.",
+  "ignored_types": [
+    "Action",
+    "Body",
+    "CodingKeys",
+    "Constants",
+    "Error",
+    "ID",
+    "Preview",
+    "Previews",
+    "State"
+  ],
+  "note": "Dependency extraction is heuristic and based on Swift type-name reference matching. Common repeated Swift local type names such as CodingKeys are ignored, and duplicate type names declared in multiple files are excluded to reduce false dependency cycles. DO uses graph-level cycle detection rather than conformance to any predefined architectural style."
+}
